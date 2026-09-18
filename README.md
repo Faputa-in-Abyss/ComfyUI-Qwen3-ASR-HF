@@ -59,7 +59,8 @@ cd "D:\ComfyUI_windows_portable"
 
 
 3. 在“ComfyUI 模型”中选择已下载的 `Qwen3-ASR-1.7B-hf` 或 `Qwen3-ASR-0.6B-hf`。<img width="401" height="212" alt="image" src="https://github.com/user-attachments/assets/bdbff0ba-173e-4ff0-974f-3b2cd7b847ba" />
-若 没有识别到模型，直接输入模型权重所在文件夹路径即可，以下图为例，复制这个路径：C:\software\AIIIIIIIIII\model\qwen\Qwen3-ASR-1.7B-hf 这样你不必把模型权重存放在comfyUI指定文件夹，可直接使用本地原有支持原生transformer模型。
+**若没有识别到模型**，直接输入模型权重所在文件夹路径即可，以下图为例，复制这个路径：C:\software\AIIIIIIIIII\model\qwen\Qwen3-ASR-1.7B-hf 
+这样你不必把模型权重存放在comfyUI指定文件夹，可直接使用本地原有支持原生transformer模型。
 <img width="962" height="437" alt="image" src="https://github.com/user-attachments/assets/d8805b0f-970c-4966-92c5-7ec3f7bc8809" />
 
 4. “识别语言”保持“自动检测”，其余选项第一次使用时保持默认。
