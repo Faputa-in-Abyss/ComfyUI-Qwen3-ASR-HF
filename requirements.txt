@@ -1,0 +1,5 @@
+transformers>=5.17.0,<6
+accelerate
+huggingface_hub
+soundfile
+librosa
