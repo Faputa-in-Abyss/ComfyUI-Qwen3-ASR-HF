@@ -58,6 +58,8 @@ cd "D:\ComfyUI_windows_portable"
 5. 点击运行。识别结果会从“转写文本”输出；打开“保存 TXT”后还会写入文本文件。
 
 如果节点没有出现，请确认文件夹没有多套一层目录，然后重启 ComfyUI 并在浏览器中按 `Ctrl+F5`。
+最终节点可以参考以下方式连接，本节点不依赖输出节点，只需要音频输入即可，输出文本显示为可选项
+<img width="1005" height="881" alt="image" src="https://github.com/user-attachments/assets/bc00cdc5-c0a1-42cb-8f6d-b4bf2c8fe6a7" />
 
 ## 1. 下载什么模型
 
