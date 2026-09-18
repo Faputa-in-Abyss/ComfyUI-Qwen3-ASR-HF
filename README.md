@@ -12,6 +12,53 @@ A Windows ComfyUI custom node for local speech recognition with the native Huggi
 
 # 中文教程
 
+## 0. 先下载节点并了解怎么用
+
+第一次安装时按这个顺序操作：下载节点、放入 `custom_nodes`、安装依赖、下载模型、重启 ComfyUI。
+
+### 下载节点
+
+打开本仓库的 GitHub 页面，点击 **Code → Download ZIP**。解压后把文件夹改名为 `ComfyUI-Qwen3-ASR-HF`，放入：
+
+```text
+ComfyUI/custom_nodes/ComfyUI-Qwen3-ASR-HF
+```
+
+也可以直接使用 Git：
+
+```powershell
+cd "D:\ComfyUI\ComfyUI\custom_nodes"
+git clone https://github.com/Faputa-in-Abyss/ComfyUI-Qwen3-ASR-HF.git
+```
+
+### 安装节点依赖
+
+使用实际启动 ComfyUI 的 Python 安装依赖。秋叶整合包通常使用：
+
+```powershell
+cd "D:\ComfyUI-aki-v3"
+.\python\python.exe -m pip install -r ".\ComfyUI\custom_nodes\ComfyUI-Qwen3-ASR-HF\requirements.txt"
+```
+
+Windows Portable 通常使用：
+
+```powershell
+cd "D:\ComfyUI_windows_portable"
+.\python_embeded\python.exe -m pip install -r ".\ComfyUI\custom_nodes\ComfyUI-Qwen3-ASR-HF\requirements.txt"
+```
+
+把 `D:\...` 改成自己的安装路径。接着按第 1、2、4 节下载并放好模型，然后完全重启 ComfyUI。
+
+### 最快使用方法
+
+1. 在 ComfyUI 画布上右键，进入 **音频 → Qwen3-ASR-HF**，添加 **Qwen3-ASR-HF 语音识别**。
+2. 添加一个 ComfyUI 音频加载节点，把它的“音频”输出连接到本节点的“音频”输入。
+3. 在“ComfyUI 模型”中选择已下载的 `Qwen3-ASR-1.7B-hf` 或 `Qwen3-ASR-0.6B-hf`。
+4. “识别语言”保持“自动检测”，其余选项第一次使用时保持默认。
+5. 点击运行。识别结果会从“转写文本”输出；打开“保存 TXT”后还会写入文本文件。
+
+如果节点没有出现，请确认文件夹没有多套一层目录，然后重启 ComfyUI 并在浏览器中按 `Ctrl+F5`。
+
 ## 1. 下载什么模型
 
 识别模型只需二选一；需要时间戳时，再下载 Forced Aligner。
@@ -219,6 +266,53 @@ Portable 用户改用 `.\python_embeded\python.exe`。
 ---
 
 # English Guide
+
+## 0. Install the node first
+
+For a first-time setup, follow this order: download the node, place it under `custom_nodes`, install its dependencies, download a model, and restart ComfyUI.
+
+### Download the node
+
+Open this repository on GitHub and click **Code → Download ZIP**. Extract the archive, rename the folder to `ComfyUI-Qwen3-ASR-HF`, and place it in:
+
+```text
+ComfyUI/custom_nodes/ComfyUI-Qwen3-ASR-HF
+```
+
+Alternatively, install it with Git:
+
+```powershell
+cd "D:\ComfyUI\ComfyUI\custom_nodes"
+git clone https://github.com/Faputa-in-Abyss/ComfyUI-Qwen3-ASR-HF.git
+```
+
+### Install node dependencies
+
+Use the Python executable that actually starts ComfyUI. Aki integrated packages commonly use:
+
+```powershell
+cd "D:\ComfyUI-aki-v3"
+.\python\python.exe -m pip install -r ".\ComfyUI\custom_nodes\ComfyUI-Qwen3-ASR-HF\requirements.txt"
+```
+
+ComfyUI Windows Portable commonly uses:
+
+```powershell
+cd "D:\ComfyUI_windows_portable"
+.\python_embeded\python.exe -m pip install -r ".\ComfyUI\custom_nodes\ComfyUI-Qwen3-ASR-HF\requirements.txt"
+```
+
+Replace `D:\...` with your installation path. Next, use sections 1, 2, and 4 to download and place the models, then restart ComfyUI completely.
+
+### First transcription
+
+1. Right-click the ComfyUI canvas, open **Audio → Qwen3-ASR-HF**, and add the **Qwen3-ASR-HF Speech Recognition** node. The current node labels are Chinese.
+2. Add a ComfyUI audio loader and connect its audio output to this node's audio input.
+3. Select `Qwen3-ASR-1.7B-hf` or `Qwen3-ASR-0.6B-hf` from the model list.
+4. Keep automatic language detection and the other defaults for the first run.
+5. Run the workflow. The transcript is returned from the text output. Enable TXT saving if you also want a text file.
+
+If the node is missing, make sure the plugin is not inside an extra nested folder, restart ComfyUI, and press `Ctrl+F5` in the browser.
 
 ## 1. Choose the models
 
